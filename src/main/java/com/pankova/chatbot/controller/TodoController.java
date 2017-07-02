@@ -1,5 +1,7 @@
 package com.pankova.chatbot.controller;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +21,8 @@ public class TodoController {
 
 	@RequestMapping(path = "", method = RequestMethod.POST)
 	public Task create(@RequestBody Task task) {
+		task.setStarted(LocalDateTime.now());
+		task.setCompleted(false);
 		return taskRepository.save(task);
 	}
 

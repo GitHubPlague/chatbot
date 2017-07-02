@@ -14,7 +14,7 @@ public class Task {
 	private Long id;
 	private String title;
 	private String description;
-	private Boolean completed;
+	private boolean completed;
 	private LocalDateTime started;
 	private LocalDateTime ended;
 
@@ -42,11 +42,11 @@ public class Task {
 		this.description = description;
 	}
 
-	public Boolean getCompleted() {
+	public boolean isCompleted() {
 		return completed;
 	}
 
-	public void setCompleted(Boolean completed) {
+	public void setCompleted(boolean completed) {
 		this.completed = completed;
 	}
 
